@@ -132,14 +132,25 @@ class GuestBookForm extends Module
         'eval' => array('maxlength'=>64, 'decodeEntities'=>true,'tl_class'=>'w50')
         );
 	}
+		if ($this->gb_bbcode)
+        {
         // Comment field
         $arrFields['message'] = array
         (
         'label' => $GLOBALS['TL_LANG']['GUESTBOOK']['gb_message'] ,
         'name' => 'gbmessage',
         'inputType' => 'textarea',
-        'eval' => array('mandatory'=>true,'rows'=>10, 'cols'=>75, 'allowHtml'=>true)
+        'eval' => array('rows'=>10, 'cols'=>75, 'allowHtml'=>true)
         );
+		}else{
+        $arrFields['message'] = array
+        (
+        'label' => $GLOBALS['TL_LANG']['GUESTBOOK']['gb_message'] ,
+        'name' => 'gbmessage',
+        'inputType' => 'textarea',
+        'eval' => array( 'mandatory'=>true, 'rows'=>10, 'cols'=>75, 'allowHtml'=>true)
+        );
+		}
         // Captcha
         if (!$this->gb_disableCaptcha)
         {
