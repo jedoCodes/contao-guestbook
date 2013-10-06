@@ -1,4 +1,4 @@
-contao-guestbook
-================
+jedo-Guestbook for Contao
+=========================
 
-Guestbookl Extension for Contao OpenSource CMS
+Guestbook Extension for Contao OpenSource CMS
